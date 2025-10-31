@@ -8,7 +8,10 @@
 </head>
 
 <body>
-    <h1>Welcome from Home</h1>
+    <h1>
+        Welcome from {% if name %} {{ name }}{% else %}nothing{% endif %}
+    </h1>
+
 
 </body>
 

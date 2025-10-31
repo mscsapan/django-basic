@@ -9,11 +9,7 @@ https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
 
 import os
 
-import importlib
-
-# Import Django's WSGI application dynamically to avoid static import resolution errors in some editors/environments
-_wsgi = importlib.import_module('django.core.wsgi')
-get_wsgi_application = getattr(_wsgi, 'get_wsgi_application')
+from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'basic.settings')
 

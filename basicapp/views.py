@@ -8,3 +8,12 @@ def home(request):
 
 def dashboard(request):
     return render(request,'index.html')
+
+def request_with_param(request,id):
+    print(f'requested-id {type(id)}')
+    # user_id = ''
+    # if isinstance(id,str):
+    #     user_id = id
+    # elif isinstance(id,int):
+    #     user_id = str(id)
+    return render(request,'params.html',{'id':id})
